@@ -26,7 +26,7 @@ const config = {
             },
             {
                 test: /\.(jpg|jpeg|gif|png|svg)$/,
-                use: 'file-loader',
+                type: 'asset/resource',
                 include: path.resolve(__dirname, 'src/assets')
             }
         ]
