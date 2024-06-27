@@ -6,22 +6,25 @@ background-size:cover;
 height: 100vh;
 background-repeat: no-repeat;
 background-position: center;
-position: relative;
 display: flex;
 flex-direction: column;
 justify-content: center;
-
+align-items: center;
 }
 
 button{
     cursor: pointer;
-    color: #beb4c1;
     width: 15rem;
     height: 4rem;
+    font-size: larger;
+    color: #ffffff;
     margin:1rem;
     background: none;
-    font-size: larger;
+    padding: 0.4rem 1rem;
+    border: solid white 1px;
+    border-radius: 50px;
 }
+    
 
 .btn-container{
 display: flex;
@@ -31,16 +34,21 @@ align-items: center;
 }
 
 main{
-border: #beb4c1;
-height: 70vh;
-background-color: rgba(37, 26, 26, 0.504);
-backdrop-filter: blur;
-display: flex;
-flex-direction: column;
-justify-content: center;
-border: #beb4c1 10rem;
+    border: #beb4c1;
+    height: 40vh;
+    background-color: rgba(37, 26, 26, 0.504);
+    backdrop-filter: blur;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 0.01rem white;
+    width:80vw;
+    max-width: 600px;
+    }
 
+
+main h2{
+    color: white;
+    text-align: center;
 }
-
-
-

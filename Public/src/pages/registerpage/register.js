@@ -1,14 +1,13 @@
-import style from "./styles/style.css";
+import "./register.css";
 
-const logInBtn = document.getElementById("Login-btn");
+const loginPageLink = document.getElementById("login-page-link");
 const regBtn = document.getElementById("reg-btn");
-
-logInBtn.addEventListener("click", (event) => {
+loginPageLink.addEventListener("click", (event) => {
   event.preventDefault();
   window.location.href = "login.html";
 });
 
 regBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  window.location.href = "register.html";
+  window.location.href = "login.html";
 });

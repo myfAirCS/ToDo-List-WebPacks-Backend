@@ -2,10 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
-    entry: "./src/index.js",
+    entry: {
+        index:'./src/index.js',
+        login:'./src/pages/loginpage/login.js',
+        register:'./src/pages/registerpage/register.js'
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js',
+        clean:true
     },
     module: {
         rules: [
@@ -22,7 +27,7 @@ const config = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
-                include: path.resolve(__dirname, 'src/styles')
+                include: path.resolve(__dirname, 'src')
             },
             {
                 test: /\.(jpg|jpeg|gif|png|svg)$/,
@@ -33,7 +38,19 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.html')
+            template: path.resolve(__dirname, 'src/index.html'),
+            filename:'index.html',
+            chunks:['index']
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src/pages/loginpage/login.html'),
+            filename:'login.html',
+            chunks:['login']
+        }),
+        new HtmlWebpackPlugin({
+            template:path.resolve(__dirname,'src/pages/registerpage/register.html'),
+            filename:'register.html',
+            chunks:['register']
         })
     ]
 };

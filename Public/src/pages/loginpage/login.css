@@ -1,81 +1,81 @@
-body{
-    font-family:Poppins;
-    background-color: #beb4c1;
-    background: url('./../../assets/pexels-lukas-hartmann-304281-1055613.jpg');
-    background-size:cover;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    }
-    
-    button{
-        cursor: pointer;
-        color: #ffffff;
-        margin:1rem;
-        background: none;
-        padding: 0.4rem 1rem;
-    }
-    
-    .btn-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    }
-    
-    main{
-    border: #beb4c1;
-    height: 40vh;
-    background-color: rgba(37, 26, 26, 0.504);
-    backdrop-filter: blur;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid 0.01rem white;
-    width:80vw;
-    max-width: 600px;
-    }
-    form{
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-        
-    }
+body {
+  font-family: Poppins;
+  background-color: #beb4c1;
+  background: url("./../../assets/pexels-lukas-hartmann-304281-1055613.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-    form ::placeholder{
-        color: white;
+button {
+  cursor: pointer;
+  color: #ffffff;
+  margin: 1rem;
+  background: none;
+  padding: 0.4rem 1rem;
+}
 
-    }
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    form input{
-        background: none;
-        border: solid 0.01rem white;
-        outline: white;
-        margin-bottom: 1rem;
-        border-radius: 17px;
-        padding: 0.5rem;
-        width: 100%;
-        color: white;
-    }
-    
-    main p{
-        color: rgb(255, 255, 255);
-        font-size: 0.67rem;
-        text-align: center;   
-    }
+main {
+  border: #beb4c1;
+  height: 40vh;
+  background-color: rgba(37, 26, 26, 0.504);
+  backdrop-filter: blur;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.01rem white;
+  width: 80vw;
+  max-width: 600px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
 
-    main h2{
-        color: white;
-    }
+form ::placeholder {
+  color: white;
+}
 
-    main a{
-        color: rgb(239, 168, 168);
-    }
-    
-    
+form input {
+  background: none;
+  border: solid 0.01rem white;
+  outline: white;
+  margin-bottom: 1rem;
+  border-radius: 17px;
+  padding: 0.5rem;
+  width: 100%;
+  color: white;
+}
+
+main p {
+  color: rgb(255, 255, 255);
+  font-size: 0.67rem;
+  text-align: center;
+}
+
+main h2 {
+  color: white;
+}
+
+main a {
+  color: rgb(239, 168, 168);
+}
