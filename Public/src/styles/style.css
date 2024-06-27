@@ -1,54 +1,53 @@
-body{
-font-family:Poppins;
-background-color: #beb4c1;
-background: url('./../assets/pexels-lukas-hartmann-304281-1055613.jpg');
-background-size:cover;
-height: 100vh;
-background-repeat: no-repeat;
-background-position: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+body {
+  font-family: Poppins;
+  background-color: #beb4c1;
+  background: url("./../assets/pexels-lukas-hartmann-304281-1055613.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-button{
-    cursor: pointer;
-    width: 15rem;
-    height: 4rem;
-    font-size: larger;
-    color: #ffffff;
-    margin:1rem;
-    background: none;
-    padding: 0.4rem 1rem;
-    border: solid white 1px;
-    border-radius: 50px;
-}
-    
-
-.btn-container{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+button {
+  cursor: pointer;
+  width: 15rem;
+  height: 4rem;
+  font-size: larger;
+  color: #ffffff;
+  margin: 1rem;
+  background: none;
+  padding: 0.4rem 1rem;
+  border: solid white 1px;
+  border-radius: 50px;
 }
 
-main{
-    border: #beb4c1;
-    height: 40vh;
-    background-color: rgba(37, 26, 26, 0.504);
-    backdrop-filter: blur;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid 0.01rem white;
-    width:80vw;
-    max-width: 600px;
-    }
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+main {
+  border: #beb4c1;
+  height: 40vh;
+  background-color: rgba(37, 26, 26, 0.504);
+  backdrop-filter: blur;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.01rem white;
+  width: 80vw;
+  max-width: 600px;
+  min-width: 300px;
+}
 
-main h2{
-    color: white;
-    text-align: center;
+main h2 {
+  color: white;
+  text-align: center;
 }

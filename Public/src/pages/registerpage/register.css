@@ -34,7 +34,6 @@ button {
 
 main {
   border: #beb4c1;
-  height: 50vh;
   background-color: rgba(37, 26, 26, 0.504);
   backdrop-filter: blur;
   display: flex;
@@ -44,6 +43,8 @@ main {
   border: solid 0.01rem white;
   width: 80vw;
   max-width: 600px;
+  min-width: 300px;
+  padding: 0.5rem 0;
 }
 
 main p {
@@ -64,6 +65,8 @@ form {
   display: flex;
   flex-direction: column;
   width: 70%;
+  justify-content: center;
+  align-items: center;
 }
 
 form ::placeholder {
