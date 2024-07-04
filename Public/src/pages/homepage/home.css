@@ -1,0 +1,116 @@
+body {
+  font-family: Poppins;
+  background-color: #beb4c1;
+  background: url("./../../assets/pexels-lukas-hartmann-304281-1055613.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.dlt-btn {
+  color: rgb(247, 81, 81);
+  padding: 0;
+  border: 1px white solid;
+  border-radius: 50%;
+  padding: 0.3rem;
+  font-size: smaller;
+}
+button {
+  cursor: pointer;
+  color: #ffffff;
+  background: none;
+  padding: 0.4rem 1rem;
+  flex: 0.2;
+}
+
+main {
+  border: #beb4c1;
+  background-color: rgba(37, 26, 26, 0.504);
+  backdrop-filter: blur;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.01rem white;
+  width: 80vw;
+  max-width: 600px;
+  min-width: 300px;
+  padding: 0.5rem 0;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+form ::placeholder {
+  color: white;
+}
+
+form input {
+  background: none;
+  border: solid 0.01rem white;
+  outline: white;
+  border-radius: 17px;
+  padding: 0.5rem;
+  width: 100%;
+  color: white;
+  flex: 0.75;
+}
+
+.form-input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+main p {
+  color: rgb(255, 255, 255);
+  font-size: 0.67rem;
+  text-align: center;
+}
+
+main h2 {
+  color: white;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  overflow: auto;
+  height: 300px;
+  background-color: rgba(85, 45, 45, 0.366);
+  border-radius: 3%;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  border: white solid 0.01rem;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.task p {
+  color: white;
+  font-size: small;
+  margin: 0;
+  padding: 0 0.5rem; /* Add padding to prevent text from touching the edges */
+  flex: 1; /* Allow p elements to take available space */
+}
