@@ -1,13 +1,19 @@
 import "./register.css";
+import { clearFormFields } from "./clearFormFields.js";
+import { postDataForRegistration } from "./postDataForRegistration.js";
 
-const loginPageLink = document.getElementById("login-page-link");
-const regBtn = document.getElementById("reg-btn");
-loginPageLink.addEventListener("click", (event) => {
-  event.preventDefault();
-  window.location.href = "login.html";
-});
+document
+  .getElementById("login-page-link")
+  .addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.href = "login.html";
+  });
 
-regBtn.addEventListener("click", (event) => {
+document.getElementById("reg-btn").addEventListener("click", async (event) => {
   event.preventDefault();
-  window.location.href = "login.html";
+  const success = await postDataForRegistration();
+  if (success) {
+    clearFormFields();
+    window.location.href = "login.html";
+  }
 });
