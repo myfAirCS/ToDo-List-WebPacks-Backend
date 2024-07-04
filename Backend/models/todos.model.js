@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 
 const todoSchema = new mongoose.Schema(
   {
-    task: String,
-    completed: Boolean,
-    User: {
+    Title: String,
+    Status: Boolean,
+    userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
