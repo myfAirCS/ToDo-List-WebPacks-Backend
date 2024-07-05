@@ -1,7 +1,7 @@
 import "./login.css";
 
-import { postDataForLogIn } from "./postDataForLogIn.js";
-import { clearLogInFormField } from "./clearLogInFormField.js";
+import { postDataForLogIn } from "./utils/postDataForLogIn.js";
+import { clearLogInFormField } from "./utils/clearLogInFormField.js";
 
 document
   .getElementById("login-btn")
