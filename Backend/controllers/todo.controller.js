@@ -129,4 +129,29 @@ const deleteTask = asyncWrapper(async (req, res) => {
     .json(new apiResponse(200, "Task Deleted Successfully", deleteTodo));
 });
 
-export { addTask, editTask, changeTaskStatus, deleteTask };
+const sendAllTheTasks = asyncWrapper(async (req, res) => {
+  try {
+    const { userId } = req.params;
+    if (!userId) {
+      res.status(404).json(new apiError("User Id Missing", 404));
+      throw new apiError("User Id Missing", 404);
+    }
+
+    const allTodos = await Todo.find({
+      userId,
+    });
+    if (!allTodos) {
+      res.status(500).json(new apiError("Can't Get The Tasks", 500));
+      throw new apiError("Can't Get The Tasks", 500);
+    }
+
+    res
+      .status(200)
+      .json(new apiResponse(200, "Tasks Fetched Successfully", allTodos));
+  } catch (error) {
+    console.error("Error : ", error.message);
+    res.status(500).json(new apiError(error.message || "Server Issue", 500));
+  }
+});
+
+export { addTask, editTask, changeTaskStatus, deleteTask, sendAllTheTasks };
