@@ -1,6 +1,6 @@
 import "./register.css";
-import { clearFormFields } from "./clearFormFields.js";
-import { postDataForRegistration } from "./postDataForRegistration.js";
+import { clearFormFields } from "./utils/clearFormFields.js";
+import { postDataForRegistration } from "./utils/postDataForRegistration.js";
 
 document
   .getElementById("login-page-link")
