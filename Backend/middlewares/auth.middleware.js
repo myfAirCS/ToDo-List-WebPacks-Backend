@@ -5,15 +5,12 @@ import { User } from "../models/users.model.js";
 
 export const verifyJWT = asyncWrapper(async (req, _, next) => {
   const token =
-    req.body?.accessToken ||
-    req.header("Autohorization")?.replace("Bearer ", "").trim() ||
-    req.cookies;
-  if (!token) throw new apiError("Cookies Expired", 403);
+    req.body?.AccessToken ||
+    req.header("Authorization")?.replace("Bearer ", "").trim() ||
+    req.cookies.AccessToken;
+  if (!token) throw new apiError("Cookies Not Found", 403);
 
-  const decodedToken = await jwt.verify(
-    token.AccessToken,
-    process.env.JWT_SECRET_ACCESS
-  );
+  const decodedToken = await jwt.verify(token, process.env.JWT_SECRET_ACCESS);
 
   if (!decodedToken) throw new apiError("Unauthorized Request", 403);
 
