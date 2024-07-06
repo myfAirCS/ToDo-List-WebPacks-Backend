@@ -1,6 +1,6 @@
 import "./login.css";
 
-import { postDataForLogIn } from "./utils/postDataForLogIn.js";
+import { postDataForLogIn } from "./Functions/Request/postDataForLogIn.js";
 import { clearLogInFormField } from "./utils/clearLogInFormField.js";
 
 document
