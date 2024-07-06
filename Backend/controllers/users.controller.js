@@ -45,6 +45,7 @@ const registerUser = asyncWrapper(async (req, res) => {
     "-password -refreshToken"
   );
 
+  console.log("Registered");
   res
     .status(200)
     .json(new apiResponse(200, "User Registered Successfully", createdUser));
@@ -75,6 +76,8 @@ const logInUser = asyncWrapper(async (req, res) => {
     accessToken,
     refreshToken,
   };
+
+  console.log("Logged In");
   res
     .status(200)
     .cookie("AccessToken", accessToken)
@@ -100,6 +103,8 @@ const logoutUser = asyncWrapper(async (req, res) => {
       new: true,
     }
   );
+
+  console.log("Logged Out");
   res
     .status(200)
     .clearCookie("AccessToken")
@@ -107,4 +112,22 @@ const logoutUser = asyncWrapper(async (req, res) => {
     .json(new apiResponse(200, "User Logged Out Successfully", {}));
 });
 
-export { registerUser, logInUser, logoutUser };
+const verifyUser = asyncWrapper(async (req, res) => {
+  try {
+    const user = req.user;
+    if (!user) throw new apiError("Cookies Not Found", 401);
+
+    const loggedInUser = await User.findById(user._id);
+
+    if (!loggedInUser) throw new apiError("User NoT Logged In");
+    res
+      .status(200)
+      .json(new apiResponse(200, "User Verified Successfully", user));
+  } catch (error) {
+    console.error("Error : ", error.message);
+
+    throw new apiError("Server Issue" || error.message, 500);
+  }
+});
+
+export { registerUser, logInUser, logoutUser, verifyUser };
