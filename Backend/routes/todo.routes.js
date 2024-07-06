@@ -11,8 +11,8 @@ import { verifyJWT } from "../middlewares/auth.middleware.js";
 const router = Router();
 //Secured Routes
 router.route("/addtask").post(verifyJWT, addTask);
-router.route("/edittask").patch(verifyJWT, editTask);
-router.route("/changetaskstatus").patch(verifyJWT, changeTaskStatus);
-router.route("/deletetask").delete(verifyJWT, deleteTask);
+router.route("/edittask/:_id").patch(verifyJWT, editTask);
+router.route("/changetaskstatus/:_id").patch(verifyJWT, changeTaskStatus);
+router.route("/deletetask/:_id").delete(verifyJWT, deleteTask);
 router.route("/:userId/gettasks").get(sendAllTheTasks);
 export default router;
