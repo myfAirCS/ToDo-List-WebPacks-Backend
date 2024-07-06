@@ -9,7 +9,7 @@ app.use(
     origin: process.env.CORS_ORIGIN,
     methods: ["GET", "POST", "DELETE", "PATCH", "PUT"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true, // Allow credentials
+    credentials: true,
   })
 );
 
