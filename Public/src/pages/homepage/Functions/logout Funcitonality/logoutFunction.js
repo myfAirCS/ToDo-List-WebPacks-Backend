@@ -1,4 +1,4 @@
-import { removeValuesFormLocalStorage } from "../../../utils/removeValuesFromLocalStorage.js";
+import { removeValuesFormLocalStorage } from "../../../../utils/removeValuesFromLocalStorage.js";
 import { requestToRemoveRefreshToken } from "./request/requestToRemoveRefreshToken.js";
 
 export const logoutFunction = async () => {
