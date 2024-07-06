@@ -48,7 +48,7 @@ button:active {
 main {
   border: #beb4c1;
   background-color: rgba(37, 26, 26, 0.504);
-  backdrop-filter: blur;
+  backdrop-filter: blur(0.7px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,4 +125,14 @@ ul {
   margin: 0;
   padding: 0 0.5rem; /* Add padding to prevent text from touching the edges */
   flex: 1; /* Allow p elements to take available space */
+}
+
+.edit-task {
+  color: white;
+  font-size: small;
+  background: none;
+  text-align: center;
+  margin: 0;
+  padding: 0 0.5rem;
+  flex: 1;
 }

@@ -36,7 +36,7 @@ main {
   border: #beb4c1;
   height: 40vh;
   background-color: rgba(37, 26, 26, 0.504);
-  backdrop-filter: blur;
+  backdrop-filter: blur(0.7px);
   display: flex;
   flex-direction: column;
   justify-content: center;
