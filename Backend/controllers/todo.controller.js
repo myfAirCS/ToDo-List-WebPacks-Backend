@@ -32,9 +32,9 @@ const addTask = asyncWrapper(async (req, res) => {
 
 const editTask = asyncWrapper(async (req, res) => {
   try {
-    const { id } = req.params;
+    const { _id } = req.params;
 
-    if (!id) {
+    if (!_id) {
       res.status(404).json(new apiError("Id is Missing", 404));
       throw new apiError("Id is Missing", 404);
     }
@@ -45,7 +45,7 @@ const editTask = asyncWrapper(async (req, res) => {
       throw new apiError("Title is Missing", 404);
     }
     const todo = await Todo.findByIdAndUpdate(
-      id,
+      _id,
       {
         $set: {
           Title: Title,
@@ -71,8 +71,8 @@ const editTask = asyncWrapper(async (req, res) => {
 
 const changeTaskStatus = asyncWrapper(async (req, res) => {
   try {
-    const { id } = req.params;
-    if (!id) {
+    const { _id } = req.params;
+    if (!_id) {
       res.status(404).json(new apiError("Id is Missing", 404));
       throw new apiError("Id is Missing", 404);
     }
@@ -84,7 +84,7 @@ const changeTaskStatus = asyncWrapper(async (req, res) => {
     }
 
     const newTodo = await Todo.findByIdAndUpdate(
-      id,
+      _id,
       {
         $set: {
           Status: Status,
@@ -110,14 +110,14 @@ const changeTaskStatus = asyncWrapper(async (req, res) => {
 });
 
 const deleteTask = asyncWrapper(async (req, res) => {
-  const { id } = req.params;
+  const { _id } = req.params;
 
-  if (!id) {
+  if (!_id) {
     res.status(404).json(new apiError("Id is Missing", 404));
     throw new apiError("Id is Missing", 404);
   }
 
-  const deleteTodo = await Todo.findByIdAndDelete(id);
+  const deleteTodo = await Todo.findByIdAndDelete(_id);
 
   if (!deleteTodo) {
     res.status(500).json(new apiError("Failed To Delete", 500));
